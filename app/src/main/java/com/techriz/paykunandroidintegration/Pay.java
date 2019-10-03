@@ -49,19 +49,10 @@ public class Pay extends AppCompatActivity {
                 if (!TextUtils.isEmpty(name.getText().toString()) && !TextUtils.isEmpty(email.getText().toString()) && !TextUtils.isEmpty(mobno.getText().toString()) && !TextUtils.isEmpty(productName.getText().toString()) && !TextUtils.isEmpty(amount.getText().toString())) {
 
 
-                    //Live -
-                    //752386476371159
-                    //0D0D3F7A895E4661EBF3560B28222D0E
-
-                    //Sandbox -
-                    //750594026789872
-                    //CE8C1857C8EFB4C76C3C3B6AFE7E0A93
-
-
                     JSONObject object = new JSONObject();
                     try {
-                        object.put("merchant_id","752386476371159");
-                        object.put("access_token","0D0D3F7A895E4661EBF3560B28222D0E");
+                        object.put("merchant_id",merchantIdSandbox);
+                        object.put("access_token",accessTokenSandbox);
                         object.put("customer_name",name.getText().toString());
                         object.put("customer_email",email.getText().toString());
                         object.put("customer_phone",mobno.getText().toString());
